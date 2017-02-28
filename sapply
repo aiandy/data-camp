@@ -2,4 +2,24 @@
 #sapply(X, FUN, ...)
 #use str(x) to see the structure
 #lapply() and sapply() allow you to use self-defined function and apply them over a vector or list.
+#There are things that sapply can't simplified and that would return to a list as the result of lapply if the returned value is a list.
+
+#sapply() and lapply() sometimes creates a NULL.
+# Definition of print_info()
+print_info <- function(x) {
+  cat("The average temperature is", mean(x), "\n")
+}
+
+# Apply print_info() over temp using sapply()
+sapply(temp,print_info)
+
+# Apply print_info() over temp using lapply()
+lapply(temp,print_info)
+
+
+
+sapply(list(runif (10), runif (10)), 
+       function(x) c(min = min(x), mean = mean(x), max = max(x)))
+#(2) This code generates a matrix with 3 rows and 2 columns.
+#(3) The function that is used inside sapply() is anonymous.
 
