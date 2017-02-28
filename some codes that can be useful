@@ -1,0 +1,4 @@
+## To compare to vectors(or others) are the same.
+identical(x,y)
+
+##
