@@ -1,0 +1,5 @@
+#sapply will return to a vector, lapply will return to a list.
+#sapply(X, FUN, ...)
+#use str(x) to see the structure
+#lapply() and sapply() allow you to use self-defined function and apply them over a vector or list.
+
