@@ -1,5 +1,27 @@
 ## To compare to vectors(or others) are the same.
 identical(x,y)
 
-## To see the strucrture.
-str(x) 
+
+seq(): Generate sequences, by specifying the from, to and by arguments.
+rep(): Replicate elements of vectors and lists.
+sort(): Sort a vector in ascending order. Works on numerics, but also on character strings and logicals.
+rev(): Reverse the elements in a data structures for which reversal is defined.
+str(): Display the structure of any R object.
+append(): Merge vectors or lists.
+is.*(): Check for the class of an R object.
+as.*(): Convert an R object from one class to another.
+unlist(): Flatten (possibly embedded) lists to produce a vector.
+grepl(), which returns TRUE when a pattern is found in the corresponding character string.
+grep(), which returns a vector of indices of the character strings that contains the pattern.
+
+#####examples for grep()#####
+# The emails vector has already been defined for you
+emails <- c("john.doe@ivyleague.edu", "education@world.gov", "dalai.lama@peace.org",
+            "invalid.edu", "quant@bigdatacollege.edu", "cookie.monster@sesame.tv")
+# Use grepl() to match for "edu"
+grepl("edu",emails)
+# Use grep() to match for "edu", save result to hits
+hits<-grep("edu",emails)
+
+# Subset emails using hits
+emails[hits]
