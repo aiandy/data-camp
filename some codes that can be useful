@@ -25,3 +25,7 @@ hits<-grep("edu",emails)
 
 # Subset emails using hits
 emails[hits]
+
+#library('tidyr')
+#to transfer the data
+gather(data,key column,name of value column,name of grouping variable)
